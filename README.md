@@ -10,10 +10,10 @@ It also supports category lookups and favorite updates.
 
 # 1. How to REQUEST Data From This Microservice
 
-### ✔️ Endpoint  
+###  Endpoint  
 `POST http://127.0.0.1:4000/recommendations`
 
-### ✔️ Required JSON Body
+###  Required JSON Body
 ```json
 {
   "user_id": "osu_12345",
@@ -22,7 +22,7 @@ It also supports category lookups and favorite updates.
 }
 ```
 
-### ✔️ What This Does  
+###  What This Does  
 - Sends the user’s ID  
 - Sends their favorite clubs  
 - Sends their interest categories  
@@ -32,7 +32,7 @@ It also supports category lookups and favorite updates.
 
 # 2. How to RECEIVE Data From This Microservice
 
-### ✔️ Example Response JSON
+###  Example Response JSON
 ```json
 {
   "user_id": "osu_12345",
@@ -59,7 +59,7 @@ It also supports category lookups and favorite updates.
 
 # 3. Additional Supported Endpoints
 
-### ✔️ A. GET /category/{category_name}  
+###  A. GET /category/{category_name}  
 Returns all clubs belonging to a category.
 
 Example:  
@@ -79,7 +79,7 @@ Example:
 
 ---
 
-### ✔️ B. POST /favorites/update  
+###  B. POST /favorites/update  
 Updates user favorites and returns updated recommendations.
 
 **Example Request:**
@@ -124,12 +124,12 @@ This diagram shows the communication flow between the **Test Program** and the *
 
 # 6. How to Run This Microservice
 
-### ✔️ Step 1 — Install required dependencies:
+###  Step 1 — Install required dependencies:
 ```bash
 pip install fastapi uvicorn
 ```
 
-### ✔️ Step 2 — Start the microservice:
+###  Step 2 — Start the microservice:
 ```bash
 uvicorn RecommendationService:app --reload --port 4000
 ```
@@ -140,7 +140,7 @@ Uvicorn running on http://127.0.0.1:4000
 Application startup complete.
 ```
 
-### ✔️ Step 3 — Run the test program in a new terminal tab:
+###  Step 3 — Run the test program in a new terminal tab:
 ```bash
 python3 recommendation_test.py
 ```
